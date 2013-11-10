@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Perdida de presion:</strong>
+  <%= @calculo.perdida_persion %>
+</p>
+
+<p>
+  <strong>Diametro del cilindro:</strong>
+  <%= @calculo.diametro_cilindro %>
+</p>
+
+<p>
+  <strong>Velocidad del cilindro:</strong>
+  <%= @calculo.velocidad_cilindro %>
+</p>
+
+<p>
+  <strong>Presion de trabajo:</strong>
+  <%= @calculo.presion_trabajo %>
+</p>
+
+<p>
+  <strong>Diametro del tubo:</strong>
+  <%= @calculo.diametro_tubo %>
+</p>
+
+<%= link_to 'Editar', edit_calculo_path(@calculo) %> |
+<%= link_to 'Regresar', calculos_path %>

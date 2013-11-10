@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  perdida_persion: 1.5
+  diametro_cilindro: 1.5
+  velocidad_cilindro: 1.5
+  presion_trabajo: 1.5
+  diametro_tubo: 1.5
+
+two:
+  perdida_persion: 1.5
+  diametro_cilindro: 1.5
+  velocidad_cilindro: 1.5
+  presion_trabajo: 1.5
+  diametro_tubo: 1.5

@@ -1,0 +1,35 @@
+<h1>Listing calculos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Perdida de presion</th>
+      <th>Diametro del cilindro</th>
+      <th>Velocidad del cilindro</th>
+      <th>Presion de trabajo</th>
+      <th>Diametro del tubo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calculos.each do |calculo| %>
+      <tr>
+        <td><%= calculo.perdida_persion %></td>
+        <td><%= calculo.diametro_cilindro %></td>
+        <td><%= calculo.velocidad_cilindro %></td>
+        <td><%= calculo.presion_trabajo %></td>
+        <td><%= calculo.diametro_tubo %></td>
+        <td><%= link_to 'Ver', calculo %></td>
+        <td><%= link_to 'Editar', edit_calculo_path(calculo) %></td>
+        <td><%= link_to 'Eliminar', calculo, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo calculo', new_calculo_path %>

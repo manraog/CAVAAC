@@ -1,0 +1,33 @@
+<%= form_for(@calculo) do |f| %>
+  <% if @calculo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@calculo.errors.count, "error") %> prohibited this calculo from being saved:</h2>
+
+      <ul>
+      <% @calculo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :perdida_de_presion %><br>
+    <%= f.text_field :perdida_persion %>
+  </div>
+  <div class="field">
+    <%= f.label :diametro_del_cilindro %><br>
+    <%= f.text_field :diametro_cilindro %>
+  </div>
+  <div class="field">
+    <%= f.label :velocidad_del_cilindro %><br>
+    <%= f.text_field :velocidad_cilindro %>
+  </div>
+  <div class="field">
+    <%= f.label :presion_de_trabajo %><br>
+    <%= f.text_field :presion_trabajo %>
+  </div>
+  <div class="actions">
+    <%= f.submit :Calcular%>
+  </div>
+<% end %>
