@@ -11,3 +11,37 @@
  *= require_self
  *= require_tree .
  */
+.hero-unit {
+    background-image: url("http://hydraulicspneumatics.com/site-files/hydraulicspneumatics.com/files/uploads/2012/06/Festo-1-1332753051.jpg");
+    height: 333px;
+    text-align: center;
+    background-color: #fff;
+    background-position: 70% 20%;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    vertical-align: baseline;
+}
+
+.hero-unit h1, .hero-unit h2, .hero-unit h3 {
+    color: #fff;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+.marketing .span4 {
+    text-align: center;
+}
+
+.marketing .span4 {
+    text-align: center;
+}
+
+.marketing .span4 p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.marketing .span3 {
+    text-align: center;
+}

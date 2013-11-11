@@ -1,6 +1,8 @@
-<h1>Listing calculos</h1>
+<div class="page-header">
+  <h1>Calculos realizados</h1>
+</div>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Perdida de presion</th>
@@ -8,7 +10,7 @@
       <th>Velocidad del cilindro</th>
       <th>Presion de trabajo</th>
       <th>Diametro del tubo</th>
-      <th></th>
+      <th>Acciones</th>
       <th></th>
       <th></th>
     </tr>
@@ -22,9 +24,9 @@
         <td><%= calculo.velocidad_cilindro %></td>
         <td><%= calculo.presion_trabajo %></td>
         <td><%= calculo.diametro_tubo %></td>
-        <td><%= link_to 'Ver', calculo %></td>
-        <td><%= link_to 'Editar', edit_calculo_path(calculo) %></td>
-        <td><%= link_to 'Eliminar', calculo, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
+        <td><%= link_to 'Ver', calculo, :class => 'btn btn-small' %>
+            <%= link_to 'Editar', edit_calculo_path(calculo), :class => 'btn btn-small' %></td>
+        <td><%= link_to 'Eliminar', calculo, method: :delete, data: { confirm: '¿Estas seguro?' }, :class => 'btn btn-small btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +34,4 @@
 
 <br>
 
-<%= link_to 'Nuevo calculo', new_calculo_path %>
+<%= link_to 'Nuevo calculo', new_calculo_path, :class => 'btn btn-primary' %>

@@ -1,7 +1,7 @@
-<%= form_for(@calculo) do |f| %>
+<%= form_for @calculo, :html => { :class => 'form-horizontal' } do |f| %>
   <% if @calculo.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@calculo.errors.count, "error") %> prohibited this calculo from being saved:</h2>
+      <h2><%= pluralize(@calculo.errors.count, "errore") %> impiden realizar este calculo:</h2>
 
       <ul>
       <% @calculo.errors.full_messages.each do |msg| %>
@@ -11,23 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :perdida_de_presion %><br>
-    <%= f.text_field :perdida_persion %>
+<div class="control-group">
+    <%= f.label :perdida_de_presion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :perdida_persion, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :diametro_del_cilindro %><br>
-    <%= f.text_field :diametro_cilindro %>
+  <div class="control-group">
+    <%= f.label :diametro_del_cilindro, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :diametro_cilindro, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :velocidad_del_cilindro %><br>
-    <%= f.text_field :velocidad_cilindro %>
+  <div class="control-group">
+    <%= f.label :velocidad_del_cilindro, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :velocidad_cilindro, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :presion_de_trabajo %><br>
-    <%= f.text_field :presion_trabajo %>
+  <div class="control-group">
+    <%= f.label :presion_de_trabajo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :presion_trabajo, :class => 'text_field' %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit :Calcular%>
+  <div class="form-actions">
+    <%= f.submit :"Realizar calculo", :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancelar")),
+                calculos_path, :class => 'btn' %>
   </div>
 <% end %>
