@@ -25,10 +25,8 @@ class CalculosController < ApplicationController
   # POST /calculos.json
   def create
     @calculo = Calculo.new(calculo_params)
-
-    respond_to do |format|
-      if @calculo.save
-            a = @calculo.diametro_cilindro
+   
+    a = @calculo.diametro_cilindro
     b = @calculo.velocidad_cilindro
     diam_cil = [8.1, 12.16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 140, 160]
     vel_cil = [50, 100, 150, 200, 250, 300, 400, 500, 750, 1000]
@@ -66,6 +64,9 @@ class CalculosController < ApplicationController
       i += 1
     end
     @calculo.diametro_tubo = tubo[c]
+
+    respond_to do |format|
+      if @calculo.save
         format.html { redirect_to @calculo, notice: 'Se realizo el calculo de tuberia correctamente.' }
         format.json { render action: 'show', status: :created, location: @calculo }
       else
@@ -79,11 +80,9 @@ class CalculosController < ApplicationController
   # PATCH/PUT /calculos/1.json
   def update
     @calculo.update(calculo_params)
-    
-    respond_to do |format|
-      if @calculo.save
-        a = @calculo.diametro_cilindro
+    a = @calculo.diametro_cilindro
     b = @calculo.velocidad_cilindro
+    @calculo.diametro_tubo = a + b
     diam_cil = [8.1, 12.16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 140, 160]
     vel_cil = [50, 100, 150, 200, 250, 300, 400, 500, 750, 1000]
     total = {[8.1,50]=>0.1, [8.1,100]=>0.1, [8.1,150]=>0.15, [12.16,50]=>0.12}
@@ -120,6 +119,8 @@ class CalculosController < ApplicationController
       i += 1
     end
     @calculo.diametro_tubo = tubo[c]
+    respond_to do |format|
+      if @calculo.save
         format.html { redirect_to @calculo, notice: 'Los datos han sido actualizados.' }
         format.json { head :no_content }
       else
