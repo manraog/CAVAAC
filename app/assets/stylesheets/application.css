@@ -12,7 +12,7 @@
  *= require_tree .
  */
 .hero-unit {
-    background-image: url("http://hydraulicspneumatics.com/site-files/hydraulicspneumatics.com/files/uploads/2012/06/Festo-1-1332753051.jpg");
+    background-image: url("/assets/hero-bg.jpg");
     height: 333px;
     text-align: center;
     background-color: #fff;
