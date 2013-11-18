@@ -1,7 +1,8 @@
 == README
 
-Aplicación web para el calculo de tuberías para actuadores o cilindros neumaticos.
+* Versión 0.6 Beta
 
+Aplicación web para el calculo de tuberías para actuadores o cilindros neumaticos.
 
 * Entorno:
 
@@ -13,8 +14,8 @@ Aplicación web para el calculo de tuberías para actuadores o cilindros neumati
 		+ Solo para "Production": pg(Heroku), rails_12factor(Heroku)
 
 
-* Este trabajo ha sido desarrollado para la materia de Ingeniería de Software
-	
-	- Ingeniería en Telecomunicaciones Sistemas y Electrónica 
+* Ingeniería en Telecomunicaciones Sistemas y Electrónica 
 
-	- UNAM - Facultad de Estudios Superiores Cuautitlán
+* UNAM - Facultad de Estudios Superiores Cuautitlán
+
+*Este trabajo ha sido desarrollado para la materia de Ingeniería de Software

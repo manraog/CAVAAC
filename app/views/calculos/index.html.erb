@@ -21,7 +21,7 @@
         <td><%= calculo.diametro_cilindro %></td>
         <td><%= calculo.velocidad_cilindro %></td>
         <td><%= calculo.presion_trabajo %></td>
-        <td><%= calculo.diametro_tubo %></td>
+        <td><u><%= calculo.diametro_tubo %></u></td>
         <td><%= link_to 'Ver', calculo, :class => 'btn btn-small btn-info' %>
             <%= link_to 'Editar', edit_calculo_path(calculo), :class => 'btn btn-small btn-warning' %>
             <%= link_to 'Eliminar', calculo, method: :delete, data: { confirm: '¿Estas seguro?' }, :class => 'btn btn-small btn-danger' %></td>
