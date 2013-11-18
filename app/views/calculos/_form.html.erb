@@ -1,8 +1,7 @@
 <%= form_for @calculo, :html => { :class => 'form-horizontal' } do |f| %>
   <% if @calculo.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert fade in alert-error">
       <h2><%= pluralize(@calculo.errors.count, "errore") %> impiden realizar este calculo:</h2>
-
       <ul>
       <% @calculo.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -12,25 +11,25 @@
   <% end %>
 
 <div class="control-group">
-    <%= f.label :perdida_de_presion, :class => 'control-label' %>
+    <%= f.label "perdida_de_presion_(bar)", :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :perdida_persion, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :diametro_del_cilindro, :class => 'control-label' %>
+    <%= f.label "diametro_del_cilindro_(mm)", :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :diametro_cilindro, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :velocidad_del_cilindro, :class => 'control-label' %>
+    <%= f.label "velocidad_del_cilindro_(mm/s)", :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :velocidad_cilindro, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :presion_de_trabajo, :class => 'control-label' %>
+    <%= f.label "presion_de_trabajo_(bar)", :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :presion_trabajo, :class => 'text_field' %>
     </div>
