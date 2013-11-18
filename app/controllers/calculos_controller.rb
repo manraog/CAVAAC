@@ -29,6 +29,7 @@ class CalculosController < ApplicationController
     # Variables auxiliares en el calculo del tubo
     a = @calculo.diametro_cilindro
     b = @calculo.velocidad_cilindro
+    # Arreglo con valores aceptables
     diam_cil = [8.1, 12.16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 140, 160]
     vel_cil = [50, 100, 150, 200, 250, 300, 400, 500, 750, 1000]
     # Hash con los valores de la primer tabla
@@ -94,6 +95,8 @@ class CalculosController < ApplicationController
           end
           i += 1
         end
+        @calculo.diametro_cilindro = a
+        @calculo.velocidad_cilindro = b
         @calculo.diametro_tubo = tubo[c]
         @calculo.save
 
