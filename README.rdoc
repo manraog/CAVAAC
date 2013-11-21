@@ -19,3 +19,9 @@ Aplicación web para el calculo de tuberías para actuadores o cilindros neumati
 * UNAM - Facultad de Estudios Superiores Cuautitlán
 
 *Este trabajo ha sido desarrollado para la materia de Ingeniería de Software
+
+Se uso el lenguaje Ruby, que es interpretado y orientado a objetos.
+Se uso el framework (son como librerias) Rails, que esta hecho para crear aplicaciones web.
+Para la parte visual se utilizo el framework Bootstrap creado por Twitter, que nos ofrece botones, barras y estilos muy llamativos.
+La aplicación sigue el patrón modelo-vista-controlador. (osea que la los datos, la lógica y lo visual estan separados, para no hacer un revoltijo y trabajar mejor).
+La aplicación se subío a los servidores de Heroku (es gratis para aplicaciones pequeñas) y así se puede ver desde internet.
