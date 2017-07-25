@@ -1,4 +1,6 @@
-== README
+	Código recuperado de Heroku
+
+## README
 
 * Versión 0.6 Beta
 
