@@ -4,7 +4,7 @@
 
 [Demo en Heroku](http://cavaac.herokuapp.com/)
 
-Aplicación web para el calculo de tuberías para actuadores o cilindros neumaticos. La aplicación usa el MVC 
+Aplicación web para el cálculo de tuberías para actuadores o cilindros neumáticos. La aplicación usa el MVC 
 (Modelo Vista Controlador), este modelo permite que los datos, la lógica y la parte visual estén separados 
 lo que le da una mejor organización al proyecto.
 
